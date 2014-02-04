@@ -1,0 +1,17 @@
+1.
+URI + METHOD:
+/Entre/resources/api/property/create/
+PARAMS:
+all
+
+RESPONSE: 
+{"response":"OK", success: true}
+
+2.
+URI + METHOD:
+/Entre/resources/api/property/update/{id}
+PARAMS:
+all
+
+RESPONSE: 
+{"response":"OK", success: true}

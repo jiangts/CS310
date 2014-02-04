@@ -1,0 +1,43 @@
+I have CRUD pages for properties, and 
+have a read page for objects. I can make the rest of the CRUD for the without much difficulty?
+Create:
+name
+uuid (auto-generated)
+actual device connected? THIS NEEDS TO BE A FIELD, right? Maybe UUID is only generated when you connect to the real object?
+
+what about assigning type?
+Should the device itself assign type?
+
+Ok two user stoies.
+1. User creates object online first, then connects smart object to it.
+Smart phone connect to smob. Tell it to do register request.
+What does this entail? You want to 
+a. retrieve a UUID.
+b. associate the device with yourself.
+c. assoc it with a property.
+d. give the object a type
+e. give it a name
+f. figure out WHICH VIRTUAL OBJ to associate it with!!
+name dropdown or type in a new name
+
+
+
+2. Register the device in virtual world when you register in real world. 
+Again, do it through the smartphone. Smart phone does WHAT on smob's behalf?
+
+phone connects to smob via bluetooth. Phone provides smob with uname and pword for internet. 
+Then it tells smob to perform registration request.
+
+The register API:
+send user token
+send object type (within device)
+send name?? <-- provided through bluetooth
+send property??
+send register with object already in db or create new obj
+
+get UUID
+It has to do a create request for an object, AND a thermostat
+
+
+
+
