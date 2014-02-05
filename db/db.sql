@@ -107,3 +107,22 @@ create index object_fkidx_thermo on thermostat using btree(object_id);
 create index utility_fkidx on property_utility using btree(utility_id);
 create index property_fkidx on property_utility using btree(property_id);
 create index property_fkidx_obj on object using btree(property_id);
+
+insert into property_utility (utility_id, property_id, utility_state) values (1,1, 'on'), (2,1, 'off');
+
+create table doorlock (
+    id serial primary key, 
+    object_id integer,
+    state varchar(3),
+    current_code varchar(10),
+    foreign key (object_id) references object(id)
+);
+create table doorlock_history (
+    id serial primary key, 
+    doorlock_id integer,
+    object_id integer,
+    timestamp timestamp,
+    passcode varchar(10),
+    foreign key (object_id) references object(id),
+    foreign key (doorlock_id) references doorlock(id)
+);
